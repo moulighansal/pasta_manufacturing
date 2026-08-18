@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Pasta Manufacturing</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:#f2efe6;
+    color:#1b211c;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:88px;
+    background:#101411;
+    color:#f5f1e8;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    letter-spacing:7px;
+    line-height:1;
+}
+
+.logo span{
+    display:block;
+    font-family:'DM Sans',sans-serif;
+    font-size:8px;
+    letter-spacing:2px;
+    margin-top:7px;
+}
+
+.nav-links{
+    display:flex;
+    gap:38px;
+    font-size:13px;
+    letter-spacing:1.5px;
+}
+
+.nav-links a{
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#c8a45b;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:67vh;
+    background:
+        linear-gradient(rgba(10,15,12,.45),rgba(10,15,12,.72)),
+        url("images/15_factory_exterior.png") center/cover;
+    display:flex;
+    align-items:center;
+    padding:90px 8%;
+    color:white;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.eyebrow{
+    color:#d0ad61;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:11px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(55px,7vw,95px);
+    font-weight:400;
+    line-height:1;
+}
+
+.hero p{
+    max-width:650px;
+    margin-top:30px;
+    color:#e0e4df;
+    font-size:17px;
+}
+
+/* =========================
+   CONTACT INTRO
+========================= */
+
+.contact-intro{
+    padding:120px 8%;
+    background:#f2efe6;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:100px;
+}
+
+.contact-intro h2{
+    font-family:'Playfair Display',serif;
+    font-size:64px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.contact-copy{
+    color:#626860;
+    font-size:16px;
+    max-width:620px;
+}
+
+.contact-copy p+p{
+    margin-top:20px;
+}
+
+/* =========================
+   CONTACT AREA
+========================= */
+
+.contact-area{
+    padding:110px 8%;
+    background:#ddd8c9;
+}
+
+.contact-layout{
+    display:grid;
+    grid-template-columns:1fr 1.15fr;
+    gap:80px;
+    max-width:1250px;
+    margin:auto;
+}
+
+/* INFO */
+
+.contact-info{
+    padding-right:30px;
+}
+
+.contact-info h2{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    font-weight:400;
+    line-height:1.08;
+}
+
+.contact-info > p{
+    color:#666c65;
+    margin-top:20px;
+    max-width:500px;
+}
+
+.info-list{
+    margin-top:45px;
+}
+
+.info-item{
+    padding:22px 0;
+    border-top:1px solid rgba(27,33,28,.22);
+}
+
+.info-item:last-child{
+    border-bottom:1px solid rgba(27,33,28,.22);
+}
+
+.info-label{
+    color:#a9823d;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:5px;
+}
+
+.info-item a,
+.info-item span{
+    font-size:15px;
+    color:#303730;
+}
+
+.info-item a:hover{
+    color:#a9823d;
+}
+
+/* FORM */
+
+.contact-form{
+    background:#f2efe6;
+    padding:55px;
+    box-shadow:0 18px 45px rgba(25,30,26,.08);
+}
+
+.contact-form h3{
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    font-weight:400;
+    margin-bottom:8px;
+}
+
+.form-note{
+    color:#777d76;
+    font-size:13px;
+    margin-bottom:35px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    color:#636a62;
+    margin-bottom:8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    width:100%;
+    border:none;
+    border-bottom:1px solid #b8b6ad;
+    background:transparent;
+    padding:12px 3px;
+    font-family:'DM Sans',sans-serif;
+    font-size:14px;
+    color:#1b211c;
+    outline:none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+    border-bottom-color:#a9823d;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+.submit-btn{
+    border:1px solid #1b211c;
+    background:#182119;
+    color:white;
+    padding:16px 30px;
+    font-family:'DM Sans',sans-serif;
+    font-size:11px;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:#c8a45b;
+    border-color:#c8a45b;
+    color:#101411;
+}
+
+/* =========================
+   IMAGE BAND
+========================= */
+
+.image-band{
+    min-height:500px;
+    background:
+        linear-gradient(rgba(10,15,12,.50),rgba(10,15,12,.72)),
+        url("images/08_manufacturing_team.png") center/cover;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:90px 8%;
+}
+
+.image-content{
+    max-width:800px;
+}
+
+.image-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:65px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.image-content p{
+    color:#d5dad4;
+    margin:25px auto 0;
+    max-width:600px;
+}
+
+/* =========================
+   BUSINESS DETAILS
+========================= */
+
+.details{
+    padding:110px 8%;
+    background:#f2efe6;
+}
+
+.details-heading{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 65px;
+}
+
+.details-heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.details-heading p{
+    color:#666c65;
+    margin-top:20px;
+}
+
+.details-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:rgba(27,33,28,.22);
+}
+
+.detail-card{
+    background:#f2efe6;
+    padding:45px 35px;
+    min-height:230px;
+}
+
+.detail-number{
+    color:#a9823d;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.detail-card h3{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    font-weight:400;
+    margin:18px 0 12px;
+}
+
+.detail-card p{
+    color:#666c65;
+    font-size:14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#101411;
+    color:#e8e4db;
+    padding:70px 8% 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:60px;
+}
+
+.footer-logo{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    letter-spacing:6px;
+}
+
+.footer-description{
+    margin-top:18px;
+    max-width:330px;
+    color:#aeb4ad;
+    font-size:14px;
+}
+
+footer h4{
+    color:#c8a45b;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+footer a{
+    display:block;
+    color:#b9beb8;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid #353b35;
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:#7f867f;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .nav-links{
+        gap:15px;
+        font-size:10px;
+    }
+
+    .contact-grid,
+    .contact-layout{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info{
+        padding-right:0;
+    }
+
+    .details-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:12px;
+    }
+}
+
+@media(max-width:550px){
+
+    .logo{
+        font-size:22px;
+    }
+
+    .logo span{
+        display:none;
+    }
+
+    .nav-links{
+        gap:9px;
+        font-size:8px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .contact-intro,
+    .contact-area,
+    .details{
+        padding-left:7%;
+        padding-right:7%;
+    }
+
+    .contact-intro h2,
+    .contact-info h2,
+    .details-heading h2{
+        font-size:48px;
+    }
+
+    .contact-form{
+        padding:35px 25px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .image-content h2{
+        font-size:48px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        PASTA
+        <span>MANUFACTURING WITH PURPOSE</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            GET IN TOUCH
+        </div>
+
+        <h1>
+            Let's talk<br>
+            production.
+        </h1>
+
+        <p>
+            Whether you're looking for bulk supply, private-label
+            manufacturing or a dependable production partner,
+            we'd be glad to hear about your requirements.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="contact-intro">
+
+    <div class="contact-grid">
+
+        <h2>
+            Start with a conversation.
+        </h2>
+
+        <div class="contact-copy">
+
+            <p>
+                Every manufacturing requirement is different. Tell us
+                what you're looking for, from product specifications and
+                volumes to packaging and supply expectations.
+            </p>
+
+            <p>
+                Our team can then understand your requirements and
+                discuss the right manufacturing approach for your business.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT FORM -->
+
+<section class="contact-area">
+
+    <div class="contact-layout">
+
+        <div class="contact-info">
+
+            <div class="eyebrow">
+                CONTACT DETAILS
+            </div>
+
+            <h2>
+                Built for business conversations.
+            </h2>
+
+            <p>
+                Reach out directly or use the enquiry form to tell us
+                about your manufacturing requirements.
+            </p>
+
+
+            <div class="info-list">
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        EMAIL
+                    </div>
+
+                    <a href="mailto:hello@pastamanufacturing.com">
+                        hello@pastamanufacturing.com
+                    </a>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        PHONE
+                    </div>
+
+                    <a href="tel:+910000000000">
+                        +91 00000 00000
+                    </a>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        BUSINESS ENQUIRIES
+                    </div>
+
+                    <span>
+                        Bulk Supply · Private Label · Manufacturing
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-label">
+                        RESPONSE
+                    </div>
+
+                    <span>
+                        Commercial enquiries are reviewed by our team.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="contact-form">
+
+            <h3>
+                Send an enquiry.
+            </h3>
+
+            <p class="form-note">
+                Tell us a little about what you're looking for.
+            </p>
+
+
+            <form onsubmit="submitForm(event)">
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="company">
+                            Company
+                        </label>
+
+                        <input
+                            type="text"
+                            id="company"
+                            placeholder="Company name"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="you@company.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="+91"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="requirement">
+                        Enquiry Type
+                    </label>
+
+                    <select id="requirement">
+
+                        <option value="">
+                            Select an option
+                        </option>
+
+                        <option>
+                            Bulk Supply
+                        </option>
+
+                        <option>
+                            Private Label
+                        </option>
+
+                        <option>
+                            Pasta Manufacturing
+                        </option>
+
+                        <option>
+                            Packaging
+                        </option>
+
+                        <option>
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell us about your requirements..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    SEND ENQUIRY →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMAGE BAND -->
+
+<section class="image-band">
+
+    <div class="image-content">
+
+        <div class="eyebrow">
+            THE PEOPLE BEHIND THE PROCESS
+        </div>
+
+        <h2>
+            Industrial capability.<br>
+            Human attention.
+        </h2>
+
+        <p>
+            We believe reliable manufacturing comes from combining
+            capable systems with people who care about every detail.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- BUSINESS DETAILS -->
+
+<section class="details">
+
+    <div class="details-heading">
+
+        <div class="eyebrow">
+            WHAT WE CAN DISCUSS
+        </div>
+
+        <h2>
+            Tell us what you're building.
+        </h2>
+
+        <p>
+            Whether you're planning a new product or looking for a
+            stronger supply partner, we're ready to understand the brief.
+        </p>
+
+    </div>
+
+
+    <div class="details-grid">
+
+        <div class="detail-card">
+
+            <div class="detail-number">
+                01
+            </div>
+
+            <h3>
+                Product Requirements
+            </h3>
+
+            <p>
+                Discuss pasta formats, specifications and production
+                expectations for your product.
+            </p>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <div class="detail-number">
+                02
+            </div>
+
+            <h3>
+                Supply Volumes
+            </h3>
+
+            <p>
+                Share expected volumes and commercial supply requirements
+                so production can be planned accordingly.
+            </p>
+
+        </div>
+
+
+        <div class="detail-card">
+
+            <div class="detail-number">
+                03
+            </div>
+
+            <h3>
+                Packaging & Brand
+            </h3>
+
+            <p>
+                Explore finished packaging and private-label requirements
+                for your business.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                PASTA
+            </div>
+
+            <div class="footer-description">
+                Modern pasta manufacturing built around quality,
+                consistency and dependable supply.
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h4>EXPLORE</h4>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="faq.html">FAQ</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>CONNECT</h4>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Quality</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>SUPPLY</h4>
+
+            <a href="contact.html">Bulk Enquiries</a>
+            <a href="contact.html">Private Label</a>
+            <a href="contact.html">Get in Touch</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 PASTA MANUFACTURING. ALL RIGHTS RESERVED.
+        </span>
+
+        <span>
+            PRECISION · QUALITY · SCALE
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+function submitForm(event){
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    alert(
+        "Thank you, " +
+        name +
+        "! Your enquiry has been received."
+    );
+
+    event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>

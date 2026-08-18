@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Pasta Manufacturing</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'DM Sans',sans-serif;
+    background:#f2efe6;
+    color:#1b211c;
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:88px;
+    background:#101411;
+    color:#f5f1e8;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 7%;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    letter-spacing:7px;
+    line-height:1;
+}
+
+.logo span{
+    display:block;
+    font-family:'DM Sans',sans-serif;
+    font-size:8px;
+    letter-spacing:2px;
+    margin-top:7px;
+}
+
+.nav-links{
+    display:flex;
+    gap:38px;
+    font-size:13px;
+    letter-spacing:1.5px;
+}
+
+.nav-links a{
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#c8a45b;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:72vh;
+    background:
+        linear-gradient(rgba(13,18,15,.48),rgba(13,18,15,.68)),
+        url("images/02_production_line.png") center/cover;
+    display:flex;
+    align-items:center;
+    padding:90px 8%;
+    color:white;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.eyebrow{
+    color:#d0ad61;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:11px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(55px,7vw,100px);
+    font-weight:400;
+    line-height:.98;
+}
+
+.hero p{
+    max-width:650px;
+    margin-top:30px;
+    color:#e1e4df;
+    font-size:17px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    padding:125px 8%;
+    background:#f2efe6;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:100px;
+}
+
+.intro h2{
+    font-family:'Playfair Display',serif;
+    font-size:65px;
+    line-height:1.05;
+    font-weight:400;
+}
+
+.intro-text{
+    color:#5e645e;
+    font-size:17px;
+    max-width:650px;
+}
+
+.intro-text p+p{
+    margin-top:24px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#17201a;
+    color:#f2efe6;
+    padding:120px 8%;
+}
+
+.services-heading{
+    max-width:800px;
+    margin-bottom:70px;
+}
+
+.services-heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:68px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.services-heading p{
+    color:#b9c0b8;
+    margin-top:25px;
+    max-width:650px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    border-top:1px solid #414941;
+    border-left:1px solid #414941;
+}
+
+.service-card{
+    min-height:330px;
+    padding:45px;
+    border-right:1px solid #414941;
+    border-bottom:1px solid #414941;
+    transition:.3s;
+}
+
+.service-card:hover{
+    background:#202a23;
+}
+
+.service-number{
+    color:#c8a45b;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:35px;
+}
+
+.service-card h3{
+    font-family:'Playfair Display',serif;
+    font-size:37px;
+    font-weight:400;
+    margin-bottom:18px;
+}
+
+.service-card p{
+    color:#b9c0b8;
+    max-width:470px;
+}
+
+/* =========================
+   PRODUCTION PROCESS
+========================= */
+
+.process{
+    padding:130px 8%;
+    background:#ddd8c9;
+}
+
+.process-heading{
+    max-width:700px;
+    margin-bottom:70px;
+}
+
+.process-heading h2{
+    font-family:'Playfair Display',serif;
+    font-size:65px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.process-heading p{
+    margin-top:22px;
+    color:#606660;
+}
+
+.process-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(27,33,28,.25);
+}
+
+.process-item{
+    padding:40px 30px 20px 0;
+    border-right:1px solid rgba(27,33,28,.25);
+    margin-right:30px;
+}
+
+.process-item:last-child{
+    border-right:none;
+}
+
+.process-item span{
+    color:#a9823d;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+.process-item h3{
+    font-family:'Playfair Display',serif;
+    font-size:29px;
+    font-weight:400;
+    margin:18px 0;
+}
+
+.process-item p{
+    color:#606660;
+    font-size:14px;
+}
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.capability{
+    padding:120px 8%;
+    background:#f2efe6;
+}
+
+.capability-grid{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    min-height:620px;
+}
+
+.capability-image{
+    background:
+        linear-gradient(rgba(10,15,12,.08),rgba(10,15,12,.08)),
+        url("images/13_machinery_detail.png") center/cover;
+}
+
+.capability-content{
+    background:#202b23;
+    color:#f2efe6;
+    padding:75px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.capability-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:58px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.capability-content p{
+    color:#c0c6bf;
+    margin-top:28px;
+    max-width:500px;
+}
+
+.line{
+    width:55px;
+    height:1px;
+    background:#c8a45b;
+    margin:30px 0;
+}
+
+/* =========================
+   SUPPLY OPTIONS
+========================= */
+
+.supply{
+    padding:125px 8%;
+    background:#f2efe6;
+}
+
+.supply-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.supply-image{
+    min-height:550px;
+    background:
+        linear-gradient(rgba(10,15,12,.1),rgba(10,15,12,.1)),
+        url("images/05_finished_packaging.png") center/cover;
+}
+
+.supply-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:63px;
+    font-weight:400;
+    line-height:1.05;
+}
+
+.supply-content p{
+    color:#5e645e;
+    margin-top:25px;
+    max-width:550px;
+}
+
+.options{
+    margin-top:45px;
+}
+
+.option{
+    padding:20px 0;
+    border-top:1px solid rgba(27,33,28,.22);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.option:last-child{
+    border-bottom:1px solid rgba(27,33,28,.22);
+}
+
+.option strong{
+    font-family:'Playfair Display',serif;
+    font-size:21px;
+    font-weight:400;
+}
+
+.option span{
+    color:#777c76;
+    font-size:13px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    min-height:500px;
+    background:
+        linear-gradient(rgba(12,18,15,.62),rgba(12,18,15,.78)),
+        url("images/18_manufacturing_closing.png") center/cover;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.cta-content{
+    max-width:800px;
+}
+
+.cta h2{
+    font-family:'Playfair Display',serif;
+    font-size:clamp(45px,6vw,75px);
+    font-weight:400;
+    line-height:1.05;
+}
+
+.cta p{
+    margin:25px auto 35px;
+    max-width:600px;
+    color:#d4d8d2;
+}
+
+.button{
+    display:inline-block;
+    border:1px solid #c8a45b;
+    padding:16px 30px;
+    font-size:12px;
+    letter-spacing:2px;
+    color:white;
+    transition:.3s;
+}
+
+.button:hover{
+    background:#c8a45b;
+    color:#101411;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#101411;
+    color:#e8e4db;
+    padding:70px 8% 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:50px;
+    padding-bottom:60px;
+}
+
+.footer-logo{
+    font-family:'Playfair Display',serif;
+    font-size:30px;
+    letter-spacing:6px;
+}
+
+.footer-description{
+    margin-top:18px;
+    max-width:330px;
+    color:#aeb4ad;
+    font-size:14px;
+}
+
+footer h4{
+    color:#c8a45b;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+footer a{
+    display:block;
+    color:#b9beb8;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+footer a:hover{
+    color:white;
+}
+
+.footer-bottom{
+    border-top:1px solid #353b35;
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:#7f867f;
+    font-size:11px;
+    letter-spacing:1px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .nav-links{
+        gap:15px;
+        font-size:10px;
+    }
+
+    .intro-grid,
+    .supply-grid,
+    .capability-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-list{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-item:nth-child(2){
+        border-right:none;
+    }
+
+    .capability-content{
+        padding:60px 40px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:12px;
+    }
+}
+
+@media(max-width:550px){
+
+    .logo{
+        font-size:22px;
+    }
+
+    .logo span{
+        display:none;
+    }
+
+    .nav-links{
+        gap:9px;
+        font-size:8px;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .intro,
+    .services,
+    .process,
+    .capability,
+    .supply{
+        padding:80px 7%;
+    }
+
+    .intro h2,
+    .services-heading h2,
+    .process-heading h2,
+    .supply-content h2{
+        font-size:48px;
+    }
+
+    .process-list{
+        grid-template-columns:1fr;
+    }
+
+    .process-item{
+        border-right:none;
+        border-bottom:1px solid rgba(27,33,28,.25);
+        padding-bottom:30px;
+        margin-right:0;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        PASTA
+        <span>MANUFACTURING WITH PURPOSE</span>
+    </a>
+
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html" class="active">SERVICES</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            MANUFACTURING CAPABILITIES
+        </div>
+
+        <h1>
+            From raw material to reliable supply.
+        </h1>
+
+        <p>
+            Integrated pasta manufacturing capabilities designed around
+            precision, consistency and the needs of commercial partners.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="intro-grid">
+
+        <h2>
+            More than production.
+        </h2>
+
+        <div class="intro-text">
+
+            <p>
+                Our manufacturing services cover the complete production
+                journey — from raw material preparation through processing,
+                drying, quality control and finished packaging.
+            </p>
+
+            <p>
+                By keeping the process structured and controlled, we help
+                commercial partners maintain consistent quality while
+                supporting dependable supply at scale.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services">
+
+    <div class="services-heading">
+
+        <div class="eyebrow">
+            WHAT WE PROVIDE
+        </div>
+
+        <h2>
+            Manufacturing built around your requirements.
+        </h2>
+
+        <p>
+            Flexible production capabilities allow us to support different
+            pasta formats, packaging requirements and commercial supply
+            models.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <div class="service-number">01</div>
+
+            <h3>
+                Pasta Manufacturing
+            </h3>
+
+            <p>
+                Controlled production of consistent pasta using carefully
+                selected durum wheat and modern processing systems.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">02</div>
+
+            <h3>
+                Bulk Supply
+            </h3>
+
+            <p>
+                Commercial supply solutions designed for businesses that
+                require dependable volumes and consistent production.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">03</div>
+
+            <h3>
+                Private Label
+            </h3>
+
+            <p>
+                Manufacturing support for partners developing pasta products
+                under their own brand and packaging requirements.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-number">04</div>
+
+            <h3>
+                Packaging Support
+            </h3>
+
+            <p>
+                Finished-product packaging processes designed to protect
+                product quality and support commercial distribution.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process">
+
+    <div class="process-heading">
+
+        <div class="eyebrow">
+            THE PRODUCTION FLOW
+        </div>
+
+        <h2>
+            Precision at every stage.
+        </h2>
+
+        <p>
+            A disciplined manufacturing process helps turn quality raw
+            materials into dependable finished pasta.
+        </p>
+
+    </div>
+
+
+    <div class="process-list">
+
+        <div class="process-item">
+
+            <span>01</span>
+
+            <h3>
+                Raw Materials
+            </h3>
+
+            <p>
+                Carefully selected durum wheat and semolina form the
+                foundation of each production run.
+            </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+            <span>02</span>
+
+            <h3>
+                Processing
+            </h3>
+
+            <p>
+                Mixing and extrusion systems shape the product while
+                maintaining controlled production parameters.
+            </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+            <span>03</span>
+
+            <h3>
+                Drying
+            </h3>
+
+            <p>
+                Controlled drying helps achieve the consistency and
+                characteristics expected from finished pasta.
+            </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+            <span>04</span>
+
+            <h3>
+                Quality & Supply
+            </h3>
+
+            <p>
+                Testing, packaging and dispatch complete the process
+                before products move into commercial supply.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CAPABILITY -->
+
+<section class="capability">
+
+    <div class="capability-grid">
+
+        <div class="capability-image"></div>
+
+        <div class="capability-content">
+
+            <div class="eyebrow">
+                PRODUCTION TECHNOLOGY
+            </div>
+
+            <h2>
+                Modern machinery. Controlled production.
+            </h2>
+
+            <div class="line"></div>
+
+            <p>
+                Our production environment combines industrial equipment
+                with carefully monitored processes to maintain efficiency,
+                consistency and repeatable results.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUPPLY -->
+
+<section class="supply">
+
+    <div class="supply-grid">
+
+        <div class="supply-image"></div>
+
+        <div class="supply-content">
+
+            <div class="eyebrow">
+                COMMERCIAL SOLUTIONS
+            </div>
+
+            <h2>
+                Built around the way you do business.
+            </h2>
+
+            <p>
+                Whether you require bulk pasta supply or a private-label
+                manufacturing partner, our capabilities can be structured
+                around commercial requirements.
+            </p>
+
+
+            <div class="options">
+
+                <div class="option">
+                    <strong>Bulk Supply</strong>
+                    <span>COMMERCIAL VOLUMES</span>
+                </div>
+
+                <div class="option">
+                    <strong>Private Label</strong>
+                    <span>BRANDED PRODUCTION</span>
+                </div>
+
+                <div class="option">
+                    <strong>Custom Requirements</strong>
+                    <span>PARTNER SOLUTIONS</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="cta-content">
+
+        <div class="eyebrow">
+            LET'S WORK TOGETHER
+        </div>
+
+        <h2>
+            Looking for a dependable pasta manufacturing partner?
+        </h2>
+
+        <p>
+            Tell us about your requirements and let's discuss how we can
+            support your next production requirement.
+        </p>
+
+        <a href="contact.html" class="button">
+            START A CONVERSATION →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                PASTA
+            </div>
+
+            <div class="footer-description">
+                Modern pasta manufacturing built around quality,
+                consistency and dependable supply.
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h4>EXPLORE</h4>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="faq.html">FAQ</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>CONNECT</h4>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Quality</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>SUPPLY</h4>
+
+            <a href="contact.html">Bulk Enquiries</a>
+            <a href="contact.html">Private Label</a>
+            <a href="contact.html">Get in Touch</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 PASTA MANUFACTURING. ALL RIGHTS RESERVED.
+        </span>
+
+        <span>
+            PRECISION · QUALITY · SCALE
+        </span>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

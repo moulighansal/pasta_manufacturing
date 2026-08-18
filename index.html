@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Pasta Manufacturing | Precision. Quality. Scale.
+    </title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+
+        /* =====================================================
+           ROOT
+        ===================================================== */
+
+        :root {
+
+            --cream: #f4efe6;
+            --cream-dark: #e9e0d1;
+
+            --black: #151613;
+            --black-soft: #1d1e19;
+
+            --green: #23382b;
+            --green-dark: #132219;
+
+            --gold: #b58a43;
+            --gold-light: #d1a65c;
+
+            --text: #191a16;
+            --muted: #746f65;
+
+            --border: rgba(25, 26, 22, 0.16);
+
+        }
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family: "DM Sans", sans-serif;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            line-height: 1.7;
+
+        }
+
+
+        img {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+        }
+
+
+        a {
+
+            color: inherit;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .navbar {
+
+            height: 82px;
+
+            padding: 0 6%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            background: rgba(18, 19, 16, 0.98);
+
+            color: white;
+
+            border-bottom: 1px solid rgba(181, 138, 67, 0.45);
+
+        }
+
+
+        .brand {
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 29px;
+
+            letter-spacing: 0.22em;
+
+            line-height: 1;
+
+        }
+
+
+        .brand span {
+
+            display: block;
+
+            margin-top: 7px;
+
+            font-family: "DM Sans", sans-serif;
+
+            font-size: 8px;
+
+            letter-spacing: 0.30em;
+
+            font-weight: 500;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 36px;
+
+        }
+
+
+        .nav-links a {
+
+            font-size: 11px;
+
+            letter-spacing: 0.19em;
+
+            text-transform: uppercase;
+
+            color: #eeeeeb;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--gold-light);
+
+        }
+
+
+        .nav-links a.active {
+
+            color: var(--gold-light);
+
+        }
+
+
+        /* =====================================================
+           GENERAL TYPOGRAPHY
+        ===================================================== */
+
+        h1,
+        h2,
+        h3 {
+
+            font-family: "Playfair Display", serif;
+
+            font-weight: 400;
+
+            line-height: 1.08;
+
+        }
+
+
+        .eyebrow,
+        .section-label {
+
+            font-size: 10px;
+
+            letter-spacing: 0.40em;
+
+            text-transform: uppercase;
+
+            color: var(--gold-light);
+
+        }
+
+
+        .dark-eyebrow {
+
+            color: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 78vh;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            overflow: hidden;
+
+            background-image:
+                url("images/01_factory_hero.png");
+
+            background-size: cover;
+
+            background-position: center;
+
+        }
+
+
+        .hero-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    rgba(15, 19, 16, 0.40),
+                    rgba(15, 19, 16, 0.73)
+                );
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 950px;
+
+            padding: 70px 30px;
+
+        }
+
+
+        .hero h1 {
+
+            margin-top: 20px;
+
+            font-size:
+                clamp(54px, 7vw, 100px);
+
+            letter-spacing: -0.025em;
+
+        }
+
+
+        .hero-description {
+
+            max-width: 700px;
+
+            margin: 28px auto 0;
+
+            color: #eeeeeb;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           BUTTON
+        ===================================================== */
+
+        .gold-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 14px;
+
+            margin-top: 34px;
+
+            padding: 14px 27px;
+
+            border: 1px solid var(--gold-light);
+
+            color: white;
+
+            font-size: 10px;
+
+            letter-spacing: 0.25em;
+
+            text-transform: uppercase;
+
+            transition: 0.3s ease;
+
+        }
+
+
+        .gold-button:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+        }
+
+
+        .gold-button span {
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           INTRO SECTION
+        ===================================================== */
+
+        .intro-section {
+
+            padding: 110px 8%;
+
+            text-align: center;
+
+        }
+
+
+        .intro-section h2 {
+
+            margin-top: 20px;
+
+            font-size:
+                clamp(45px, 5.5vw, 72px);
+
+        }
+
+
+        .section-intro {
+
+            max-width: 760px;
+
+            margin: 28px auto 0;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           THREE CARDS
+        ===================================================== */
+
+        .three-column {
+
+            max-width: 1250px;
+
+            margin: 65px auto 0;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 1px;
+
+            background: var(--border);
+
+        }
+
+
+        .feature-card {
+
+            min-height: 255px;
+
+            padding: 45px 38px;
+
+            background: var(--cream);
+
+            text-align: left;
+
+        }
+
+
+        .card-number {
+
+            color: var(--gold);
+
+            font-size: 13px;
+
+            letter-spacing: 0.28em;
+
+        }
+
+
+        .feature-card h3 {
+
+            margin: 20px 0 18px;
+
+            font-size: 31px;
+
+        }
+
+
+        .feature-card p {
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+            max-width: 330px;
+
+        }
+
+
+        /* =====================================================
+           IMAGE + TEXT
+        ===================================================== */
+
+        .image-text-section {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            min-height: 650px;
+
+        }
+
+
+        .image-panel {
+
+            min-height: 600px;
+
+        }
+
+
+        .text-panel {
+
+            padding: 90px 10%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background: var(--cream-dark);
+
+        }
+
+
+        .text-panel h2 {
+
+            margin: 18px 0 30px;
+
+            font-size:
+                clamp(43px, 5vw, 68px);
+
+        }
+
+
+        .text-panel p {
+
+            max-width: 600px;
+
+            margin-bottom: 18px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        .text-link {
+
+            width: fit-content;
+
+            margin-top: 22px;
+
+            padding-bottom: 8px;
+
+            border-bottom:
+                1px solid var(--gold);
+
+            color: var(--text);
+
+            font-size: 10px;
+
+            letter-spacing: 0.25em;
+
+        }
+
+
+        .text-link span {
+
+            margin-left: 10px;
+
+            color: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           PROCESS SECTION
+        ===================================================== */
+
+        .process-section {
+
+            min-height: 500px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            overflow: hidden;
+
+        }
+
+
+        .process-background {
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                linear-gradient(
+                    rgba(35, 56, 43, 0.88),
+                    rgba(35, 56, 43, 0.88)
+                ),
+
+                url("images/14_factory_atmosphere.png")
+
+                center / cover no-repeat;
+
+        }
+
+
+        .process-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding: 70px 25px;
+
+        }
+
+
+        .process-content h2 {
+
+            margin-top: 18px;
+
+            font-size:
+                clamp(45px, 6vw, 76px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .footer {
+
+            padding: 75px 8% 28px;
+
+            background:
+                var(--green-dark);
+
+            color: white;
+
+        }
+
+
+        .footer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                2fr 1fr 1fr 1fr;
+
+            gap: 45px;
+
+        }
+
+
+        .footer-brand p {
+
+            max-width: 360px;
+
+            margin-top: 22px;
+
+            color: #bbc3bd;
+
+            font-size: 13px;
+
+        }
+
+
+        .footer-column h4 {
+
+            margin-bottom: 20px;
+
+            color: var(--gold-light);
+
+            font-size: 10px;
+
+            letter-spacing: 0.25em;
+
+        }
+
+
+        .footer-column a {
+
+            display: block;
+
+            margin: 9px 0;
+
+            color: #c5cbc6;
+
+            font-size: 13px;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .footer-column a:hover {
+
+            color: white;
+
+        }
+
+
+        .footer-bottom {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin-top: 60px;
+
+            padding-top: 22px;
+
+            border-top:
+                1px solid rgba(255,255,255,0.15);
+
+            color: #89948d;
+
+            font-size: 10px;
+
+            letter-spacing: 0.08em;
+
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+
+                height: auto;
+
+                padding: 22px 5%;
+
+                flex-direction: column;
+
+                gap: 22px;
+
+            }
+
+
+            .nav-links {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+                gap: 16px;
+
+            }
+
+
+            .hero {
+
+                min-height: 70vh;
+
+            }
+
+
+            .hero h1 {
+
+                font-size:
+                    clamp(48px, 12vw, 75px);
+
+            }
+
+
+            .three-column {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .image-text-section {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .image-panel {
+
+                min-height: 450px;
+
+            }
+
+
+            .text-panel {
+
+                padding: 70px 8%;
+
+            }
+
+
+            .footer-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .footer-bottom {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            .footer-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero-content {
+
+                padding: 60px 20px;
+
+            }
+
+
+            .intro-section {
+
+                padding: 75px 6%;
+
+            }
+
+
+            .feature-card {
+
+                padding: 38px 28px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+
+            PASTA
+
+            <span>
+                MANUFACTURING WITH PURPOSE
+            </span>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="index.html"
+               class="active">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                PRECISION PASTA MANUFACTURING
+            </p>
+
+
+            <h1>
+
+                Made at scale.<br>
+
+                Made with care.
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                From premium durum wheat to finished pasta,
+                we combine modern production, rigorous quality
+                control and dependable industrial supply.
+
+            </p>
+
+
+            <a href="about.html"
+               class="gold-button">
+
+                DISCOVER OUR PROCESS
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTRO
+    ===================================================== -->
+
+    <section class="intro-section">
+
+        <div class="section-label">
+
+            THE MANUFACTURING JOURNEY
+
+        </div>
+
+
+        <h2>
+
+            From grain to<br>
+            finished product.
+
+        </h2>
+
+
+        <p class="section-intro">
+
+            Every stage is designed around consistency,
+            food safety and efficiency — giving partners
+            pasta they can rely on, batch after batch.
+
+        </p>
+
+
+
+        <div class="three-column">
+
+
+            <article class="feature-card">
+
+                <span class="card-number">
+                    01
+                </span>
+
+
+                <h3>
+                    Raw Materials
+                </h3>
+
+
+                <p>
+
+                    Carefully selected durum wheat and
+                    semolina form the foundation of every
+                    production run.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <span class="card-number">
+                    02
+                </span>
+
+
+                <h3>
+                    Precision Production
+                </h3>
+
+
+                <p>
+
+                    Modern mixing, extrusion and drying
+                    systems transform raw material into
+                    consistent pasta.
+
+                </p>
+
+            </article>
+
+
+
+            <article class="feature-card">
+
+                <span class="card-number">
+                    03
+                </span>
+
+
+                <h3>
+                    Quality & Supply
+                </h3>
+
+
+                <p>
+
+                    Testing, packaging and controlled
+                    dispatch support dependable
+                    commercial supply.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FACILITY
+    ===================================================== -->
+
+    <section class="image-text-section">
+
+
+        <div class="image-panel">
+
+            <img
+                src="images/06_manufacturing_facility.png"
+                alt="Modern pasta manufacturing facility">
+
+        </div>
+
+
+
+        <div class="text-panel">
+
+            <p class="eyebrow dark-eyebrow">
+
+                INSIDE THE FACILITY
+
+            </p>
+
+
+            <h2>
+
+                Industrial capability.<br>
+                Human attention.
+
+            </h2>
+
+
+            <p>
+
+                Our production environment brings together
+                automated systems and experienced manufacturing
+                teams to keep every detail under control.
+
+            </p>
+
+
+            <p>
+
+                Clean production floors, modern equipment and
+                documented quality processes support reliable
+                B2B manufacturing from start to finish.
+
+            </p>
+
+
+            <a href="services.html"
+               class="text-link">
+
+                EXPLORE CAPABILITIES
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL IMAGE SECTION
+    ===================================================== -->
+
+    <section class="process-section">
+
+
+        <div class="process-background"></div>
+
+
+        <div class="process-content">
+
+            <p class="eyebrow">
+
+                BUILT FOR PARTNERS
+
+            </p>
+
+
+            <h2>
+
+                Consistent quality<br>
+                for every production run.
+
+            </h2>
+
+
+            <a href="contact.html"
+               class="gold-button">
+
+                START A CONVERSATION
+
+                <span>→</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <div class="brand">
+
+                    PASTA
+
+                    <span>
+                        MANUFACTURING WITH PURPOSE
+                    </span>
+
+                </div>
+
+
+                <p>
+
+                    Modern pasta manufacturing built around
+                    quality, consistency and dependable supply.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    EXPLORE
+                </h4>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    CONNECT
+                </h4>
+
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+                <a href="#">
+                    LinkedIn
+                </a>
+
+                <a href="#">
+                    Quality
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h4>
+                    SUPPLY
+                </h4>
+
+
+                <a href="contact.html">
+                    Bulk Enquiries
+                </a>
+
+                <a href="contact.html">
+                    Private Label
+                </a>
+
+                <a href="contact.html">
+                    Get in Touch
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 PASTA MANUFACTURING.
+                ALL RIGHTS RESERVED.
+            </span>
+
+
+            <span>
+                PRECISION • QUALITY • SCALE
+            </span>
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
